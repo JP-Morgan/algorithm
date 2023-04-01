@@ -1,0 +1,4 @@
+﻿  Heap.c
+F:\代码\远程仓库\algorithm-exercise\Heap\Heap\Heap.c(7,32): warning C4047: “=”:“HPDataType”与“void *”的间接级别不同
+F:\代码\远程仓库\algorithm-exercise\Heap\Heap\Heap.c(60,18): warning C4267: “=”: 从“size_t”转换到“HPDataType”，可能丢失数据
+  Heap.vcxproj -> F:\代码\远程仓库\algorithm-exercise\Heap\x64\Debug\Heap.exe
