@@ -2,7 +2,7 @@
 void TestOP()
 {
 	srand(time(0));
-	const int N = 1000000;
+	const int N = 100000;
 	int* a1 = (int*)malloc(sizeof(int) * N);
 	int* a2 = (int*)malloc(sizeof(int) * N);
 	int* a3 = (int*)malloc(sizeof(int) * N);
@@ -19,13 +19,13 @@ void TestOP()
 		a6[i] = a1[i];
 	}
 	int begin1 = clock();
-	//InsertSort(a1, N);
+	InsertSort(a1, N);
 	int end1 = clock();
 	int begin2 = clock();
 	ShellSort(a2, N);
 	int end2 = clock();
 	int begin3 = clock();
-	//SelectSort(a3, N);
+	SelectSort(a3, N);
 	int end3 = clock();
 	int begin4 = clock();
 	//HeapSort(a4, N);
@@ -49,12 +49,18 @@ void TestOP()
 	free(a5);
 	free(a6);
 }
-Print(int* a, int n)
+void Print(int* a, int n)
 {
 	for (int i = 0; i < n; i++)
 	{
 		printf("%d ", a[i]);
 	}printf("\n");
+}
+void Swap(int* a, int* p)
+{
+	int tmp = *a;
+	*a = *p;
+	*p = tmp;
 }
 //ÉýÐò
 //×îºÃ£ºO(N)	  ÄæÐò
@@ -130,4 +136,34 @@ void ShellSort(int* a, int n)
 		}
 	}
 	
+}
+
+void SelectSort(int* a, int n)
+{
+	int left = 0;
+	int right = n-1;
+	while (left<right)
+	{
+		int max;
+		int mini = max = left;
+		for (int i = left + 1; i <= right; i++)
+		{
+			if (a[i] < a[mini])
+			{
+				mini = i;
+			}
+			if (a[i] > a[max])
+			{
+				max = i;
+			}
+		}
+		Swap(&a[left], &a[mini]);
+		if (left == max)
+		{
+			max = mini;
+		}
+		Swap(&a[right], &a[max]);
+		left++;
+		right--;
+	}
 }

@@ -1,6 +1,2 @@
-﻿  Sort.c
-F:\代码\GitHub\algorithm\Sort\Sort\Sort.c(4,8): warning C4013: “time”未定义；假设外部返回 int
-F:\代码\GitHub\algorithm\Sort\Sort\Sort.c(21,15): warning C4013: “clock”未定义；假设外部返回 int
-  test.c
-  正在生成代码...
+﻿  test.c
   Sort.vcxproj -> F:\代码\GitHub\algorithm\Sort\x64\Debug\Sort.exe

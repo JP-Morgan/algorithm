@@ -3,7 +3,8 @@
 #include <stdlib.h>
 //算法测试接口
 void TestOP();
-Print(int* a, int n);
+void Print(int* a, int n);
+void Swap(int* a,int* b);
 // 插入排序
 void InsertSort(int* a,int n);
 
@@ -14,8 +15,8 @@ void InsertSort(int* a,int n);
 // 2.直接插入排序
 //
 void ShellSort(int* a,int n);
-//
-
+//选择排序
+void SelectSort(int* a, int n);
 //
 
 //
